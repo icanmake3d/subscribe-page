@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Your Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .youtube-btn {
+            display: inline-block;
+            background: #FF0000;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .youtube-btn:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .confirm-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .confirm-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .drive-link-section {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .drive-link {
+            display: inline-block;
+            background: #4285f4;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .drive-link:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+        }
+
+        .thank-you {
+            color: #2e7d32;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="subscribeSection">
+            <div class="icon">📁</div>
+            <h1>Access Your Files</h1>
+            <p class="subtitle">Please subscribe to our YouTube channel to get access to your files</p>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <p><strong>Click the button below to visit our YouTube channel</strong></p>
+                <a href="https://youtube.com/@icanmake_3d?si=HvSA12GYlk4hiNM_" target="_blank" class="youtube-btn" id="youtubeBtn">
+                    ▶ Subscribe on YouTube
+                </a>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <p><strong>After subscribing, click the button below</strong></p>
+                <button class="confirm-btn" id="confirmBtn">I've Subscribed!</button>
+            </div>
+
+            <div class="step" style="background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white;">
+                <p style="margin-bottom: 15px;"><strong>📱 Optional: Follow us on Instagram</strong></p>
+                <p style="font-size: 14px; margin-bottom: 15px; opacity: 0.95;">Stay connected for updates, behind-the-scenes, and more!</p>
+                <a href="https://www.instagram.com/icanmake3d/" target="_blank" style="display: inline-block; background: white; color: #bc1888; padding: 10px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;">
+                    Follow on Instagram
+                </a>
+            </div>
+
+            <p class="note">Your support means a lot to us! ❤️</p>
+        </div>
+
+        <div id="driveSection" class="hidden">
+            <div class="icon">✅</div>
+            <div class="drive-link-section">
+                <p class="thank-you">Thank You for Subscribing!</p>
+                <p>Here's your Google Drive link:</p>
+                <a href="https://drive.google.com/file/d/19SRq8DyCkMgcSApwbT-eG6AIePENKPzI/view?usp=drive_link" target="_blank" class="drive-link" id="driveLink">
+                    📥 Access Drive Files
+                </a>
+            </div>
+            <p class="note">Bookmark this page for future reference</p>
+        </div>
+    </div>
+
+    <script>
+        const subscribeSection = document.getElementById('subscribeSection');
+        const driveSection = document.getElementById('driveSection');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const youtubeBtn = document.getElementById('youtubeBtn');
+        
+        // Track if YouTube link was clicked
+        let youtubeLinkClicked = false;
+        
+        youtubeBtn.addEventListener('click', function() {
+            youtubeLinkClicked = true;
+        });
+        
+        confirmBtn.addEventListener('click', function() {
+            if (!youtubeLinkClicked) {
+                alert('Please click the YouTube button first to subscribe!');
+                return;
+            }
+            
+            // Show drive section
+            subscribeSection.classList.add('hidden');
+            driveSection.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
